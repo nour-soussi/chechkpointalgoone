@@ -1,0 +1,16 @@
+ALGORITHM First Task
+VAR
+    i,j,sum : INTEGER;
+    set1,set2 : ARRAY_OF INTEGER;
+BEGIN 
+    FOR(i:=0;i++,i<length(set1)){
+        FOR(j:=0;j++,j<length(set2)){
+            IF (set1[i]==set2[j])
+                sum:=sum+set1[i];
+                j:=length(set1);
+            END IF;    
+        }
+    }
+
+    write(sum);
+END;

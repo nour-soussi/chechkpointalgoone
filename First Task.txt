@@ -1,0 +1,19 @@
+ALGORITHM First Task
+VAR
+    nbvoy,nbword: INTEGER;
+    c : CHAR;
+    resultat : STRING;
+BEGIN
+    nbvoy:=0;
+    nbword:=0;
+    c:='';
+    while(c <> '.') do {
+        read(c);
+        resultat:=resultat+c;
+        IF (c = ' ')
+            nbword:=nbword+1;
+        END IF;
+        IF (UPCASE(c) in ['A','E','O','U','I'])
+            nbvoy:=nbvoy+1;
+        END IF;
+    };
