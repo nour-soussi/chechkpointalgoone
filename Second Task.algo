@@ -6,10 +6,16 @@ BEGIN
     FOR(i:=0;i++,i<length(set1)){
         FOR(j:=0;j++,j<length(set2)){
             IF (set1[i]==set2[j])
-                sum:=sum+set1[i];
-                j:=length(set1);
+                set1[i]:=0;
+                set2[j]:=0;
             END IF;    
         }
+    }
+    FOR(i:=0;i++,i<length(set1)){
+        sum:=sum+set1[i];
+    }
+    FOR(i:=0;i++,i<length(set2)){
+        sum:=sum+set2[i];
     }
 
     write(sum);
